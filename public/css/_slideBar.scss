@@ -1,0 +1,97 @@
+.hero {
+  width: 100vw;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85%);
+  .slideBar {
+    display: flex;
+    width: 500vw;
+    transition: 1.5s ease-in-out;
+
+    .slideItem {
+      background-image: url(../images/bg.avif);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100vw;
+      height: 45vw;
+      @media (max-width: 750px) {
+        height: 70vw;
+      }
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      img {
+        height: 40vw;
+        @media (max-width: 750px) {
+          height: 60vw;
+        }
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 2;
+        filter: brightness(80%) drop-shadow(8px 8px 10px gray);
+      }
+      .slideBg {
+        position: absolute;
+        background-color: #369e62;
+        z-index: 1;
+        width: 50vw;
+        height: 50vw;
+        @media (max-width: 750px) {
+          width: 70vw;
+          height: 70vw;
+        }
+        border-radius: 70vw;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      &:nth-child(2) {
+        .slideBg {
+          background-color: rebeccapurple;
+        }
+      }
+      &:nth-child(3) {
+        .slideBg {
+          background-color: teal;
+        }
+      }
+      &:nth-child(4) {
+        .slideBg {
+          background-color: cornflowerblue;
+        }
+      }
+      &:nth-child(5) {
+        .slideBg {
+          background-color: rgb(124, 115, 80);
+        }
+      }
+    }
+    .slideText {
+      width: 25vw;
+      color: #fff;
+      position: absolute;
+      top: 42.5%;
+      right: 2%;
+      z-index: 3;
+      transform: translateY(-50%);
+      h1 {
+        font-size: 4vw;
+        padding-bottom: 16px;
+      }
+      button {
+        color: #fff;
+        background-color: transparent;
+        padding: 7px;
+        font-size: 1.5vw;
+        @media (max-width: 750px) {
+          font-size: 2vw;
+        }
+        border: solid 2px whitesmoke;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    }
+  }
+}

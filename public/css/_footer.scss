@@ -1,0 +1,92 @@
+footer {
+  display: flex;
+  @media (max-width: 750px) {
+    display: block;
+  }
+  justify-content: space-between;
+  .footerTop {
+    width: 67%;
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+    display: flex;
+    justify-content: space-around;
+    font-weight: lighter;
+    padding: 20px;
+
+    text-align: center;
+    .footerMenu {
+      color: grey;
+      cursor: pointer;
+      h4 {
+        color: black;
+        font-weight: bold;
+      }
+      ul {
+        font-size: 15px;
+        li {
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  .footerBottom {
+    width: 33%;
+    @media (max-width: 750px) {
+      width: 100%;
+    }
+    background-color: ghostwhite;
+    text-align: right;
+    @media (max-width: 750px) {
+      text-align: center;
+    }
+    padding: 20px;
+    .stayTuned {
+      @media (max-width: 750px) {
+        display: flex;
+        justify-content: space-around;
+      }
+      .footerNews {
+        .fNMail {
+          font-size: 17px;
+          .fNButton {
+            cursor: pointer;
+            font-size: 15px;
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 2px 5px;
+            &:active {
+              opacity: 0.6;
+              transform: translate(-1px, -1px);
+            }
+          }
+        }
+      }
+      .footerContact {
+        margin-top: 10px;
+        @media (max-width: 750px) {
+          margin: 0;
+        }
+        .fCIcons {
+          cursor: pointer;
+          img {
+            width: auto;
+            height: 22px;
+            &:active {
+              opacity: 0.6;
+              transform: translateX(-1px);
+            }
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 12px;
+      color: darkgrey;
+    }
+  }
+}

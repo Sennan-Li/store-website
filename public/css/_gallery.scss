@@ -1,0 +1,23 @@
+.gallery {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 5%;
+  background-image: url(../images/dark.jpg);
+  background-size: cover;
+  padding: 5%;
+  .galleryItem {
+    text-align: center;
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h1 {
+      font-size: 30px;
+      padding: 16px;
+      color: #fff;
+      @media (max-width: 750px) {
+        font-size: 3.5vw;
+      }
+    }
+  }
+}

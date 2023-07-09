@@ -1,0 +1,87 @@
+@font-face {
+  font-family: quadrata;
+  src: url(/homepage/fonts/quadrata.woff);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: quadrata;
+}
+nav {
+  padding: 1.2vw 2.4vw;
+  display: flex;
+  justify-content: space-between;
+  background-color: #000;
+  width: 100vw;
+
+  overflow: hidden;
+  .logo {
+    width: auto;
+    height: 55px;
+    @media (max-width: 750px) {
+      height: 40px;
+    }
+  }
+  .navBar {
+    display: flex;
+    text-align: center;
+    .navItem {
+      cursor: pointer;
+      padding: 0px 3vw;
+      img {
+        width: auto;
+        height: 25px;
+        @media (max-width: 750px) {
+          height: 20px;
+        }
+        filter: brightness(130%);
+      }
+      p {
+        font-size: 13px;
+        padding-top: 5px;
+        color: #fff;
+      }
+    }
+  }
+  .navEnd {
+    @media (max-width: 750px) {
+      display: none;
+    }
+    display: flex;
+    margin-top: 11px;
+    .searchBar {
+      background-color: #fff;
+      display: flex;
+      padding: 5px;
+      border-radius: 10px;
+      height: 35px;
+
+      input {
+        border: 0;
+        height: 25px;
+        width: auto;
+      }
+      img {
+        width: auto;
+        height: 25px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    .cart {
+      width: auto;
+      height: 25px;
+
+      margin-top: 4px;
+      padding-left: 18px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+  }
+}
